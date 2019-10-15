@@ -9,7 +9,11 @@ body, html {
     padding: 0;
 }
 
-
+/* LAYOUT */
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
 
 /* BUTTON */
 .btn {
@@ -17,13 +21,14 @@ body, html {
     text-align: center;
     padding: 12px 10px;
     height: 50px;
-    background-color: blue;
+    background-color: #2196f3;
     color: #fff;
     font-size: 20px;
     margin: 0;
     border: none;
     transition: all 0.3s;
     vertical-align: middle;
+    cursor: pointer;
 }
 .btn--hover-effect:hover {
     transition: all 0.3s;
@@ -47,11 +52,42 @@ body, html {
     position: relative;
     display: inline-block;
 }
+.show .dropdown__content{
+    display: block;
+}
 
+.dropdown__trigger::after {
+    border-top: 10px solid white;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    margin-left: 15px;
+    height: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: 5px;
+    content: '';
+}
 
+.dropdown__content {
+    padding: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px 5px 5px 5px;
+    display: none;
+}
+
+.dropdown__item {
+    display: block;
+    padding: 10px;
+    background-color: white;
+
+}
+.dropdown__item:hover {
+    background-color: #f4f4f4;
+}
 
 
 /* UTIL */
-.blue--background01 {
+.background--blue1 {
     background-color: #2196f3;
 }
